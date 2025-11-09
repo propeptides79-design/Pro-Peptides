@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pro-Peptides - Research Peptides</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 0; padding: 0; background-color: #f4f4f4; }
+        header { background-color: #333; color: white; padding: 20px; text-align: center; }
+        .disclaimer { background-color: #ffdddd; padding: 15px; margin: 20px; border: 1px solid #ff0000; text-align: center; font-weight: bold; }
+        .container { max-width: 1200px; margin: 0 auto; padding: 20px; }
+        table { width: 100%; border-collapse: collapse; margin: 20px 0; }
+        th, td { border: 1px solid #ddd; padding: 12px; text-align: left; }
+        th { background-color: #f2f2f2; }
+        #age-verification { position: fixed; top: 0; left: 0; width: 100%; height: 100%; background-color: rgba(0,0,0,0.8); display: flex; justify-content: center; align-items: center; z-index: 1000; }
+        #age-verification .modal { background-color: white; padding: 40px; text-align: center; border-radius: 10px; max-width: 500px; }
+        button { padding: 10px 20px; margin: 10px; cursor: pointer; font-size: 16px; }
+        #enter-btn { background-color: #4CAF50; color: white; border: none; }
+        #exit-btn { background-color: #f44336; color: white; border: none; }
+        footer { background-color: #333; color: white; text-align: center; padding: 10px; margin-top: 20px; }
+        @media (max-width: 600px) { table, thead, tbody, th, td, tr { display: block; } th { display: none; } td { border: none; border-bottom: 1px solid #ddd; position: relative; padding-left: 50%; } td:before { position: absolute; left: 6px; width: 45%; padding-right: 10px; white-space: nowrap; font-weight: bold; } td:nth-of-type(1):before { content: "Code:"; } td:nth-of-type(2):before { content: "Name:"; } td:nth-of-type(3):before { content: "Single:"; } td:nth-of-type(4):before { content: "Kit:"; } }
+    </style>
+</head>
+<body>
+
+<!-- Age Verification Modal -->
+<div id="age-verification">
+    <div class="modal">
+        <h2>Age Verification Required</h2>
+        <p>You must be <strong>21 years or older</strong> to enter this site.</p>
+        <p><strong>For Research Purposes Only</strong><br>Products are <strong>NOT</strong> for human or animal consumption.</p>
+        <button id="enter-btn" onclick="enterSite()">I am 21 or older</button>
+        <button id="exit-btn" onclick="exitSite()">I am under 21</button>
+    </div>
+</div>
+
+<header>
+    <h1>Pro-Peptides</h1>
+    <p>High-Quality Research Peptides – For Laboratory Use Only</p>
+</header>
+
+<div class="disclaimer">
+    <strong>LEGAL DISCLAIMER:</strong> All products are sold strictly for <strong>research and laboratory use only</strong>. They are <strong>not for human or veterinary use</strong>, food, drug, or cosmetic application. By proceeding, you confirm you are a qualified researcher and understand these terms. Misuse is prohibited and may violate federal law.
+</div>
+
+<div class="container">
+    <h2>Product Catalog</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>Item Code</th>
+                <th>Name</th>
+                <th>Price (Single)</th>
+                <th>Price (Per Kit)</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr><td>TR5</td><td>Tirzepatide</td><td>$65</td><td>$550</td></tr>
+            <tr><td>TR10</td><td>Tirzepatide</td><td>$75</td><td>$650</td></tr>
+            <tr><td>RT5</td><td>Retatrutide</td><td>$70</td><td>$600</td></tr>
+            <tr><td>RT10</td><td>Retatrutide</td><td>$80</td><td>$700</td></tr>
+            <tr><td>RT15</td><td>Retatrutide</td><td>$90</td><td>$800</td></tr>
+            <tr><td>BC5</td><td>BPC157</td><td>$40</td><td>$325</td></tr>
+            <tr><td>BC10</td><td>BPC157</td><td>$50</td><td>$400</td></tr>
+            <tr><td>BC15</td><td>BPC157</td><td>$65</td><td>$550</td></tr>
+            <tr><td>DS15</td><td>DSIP</td><td>$40</td><td>$300</td></tr>
+            <tr><td>ET10</td><td>Epitalon</td><td>$40</td><td>$375</td></tr>
+            <tr><td>ET50</td><td>Epitalon</td><td>$60</td><td>$575</td></tr>
+            <tr><td>CU50</td><td>GHK-CU</td><td>$50</td><td>$450</td></tr>
+            <tr><td>BBG70</td><td>Glow</td><td>$50</td><td>$450</td></tr>
+            <tr><td>GTT</td><td>Glutathione</td><td>$50</td><td>$400</td></tr>
+            <tr><td>KLOW80</td><td>Klow</td><td>$90</td><td>$800</td></tr>
+            <tr><td>LC216</td><td>Lipo C/B12</td><td>$40</td><td>$325</td></tr>
+            <tr><td>MS10</td><td>Mots-C</td><td>$50</td><td>$400</td></tr>
+            <tr><td>MS40</td><td>Mots-C</td><td>$65</td><td>$550</td></tr>
+            <tr><td>ML10</td><td>Melanotan-2</td><td>$40</td><td>$350</td></tr>
+            <tr><td>NJ500</td><td>NAD+</td><td>$40</td><td>$350</td></tr>
+            <tr><td>PT1</td><td>PT141</td><td>$40</td><td>$350</td></tr>
+            <tr><td>SK10</td><td>Selank</td><td>$40</td><td>$350</td></tr>
+            <tr><td>XA10</td><td>Semax</td><td>$45</td><td>$375</td></tr>
+            <tr><td>322</td><td>Slu-PP-332</td><td>$50</td><td>$475</td></tr>
+            <tr><td>NP810</td><td>Snap8</td><td>$35</td><td>$300</td></tr>
+            <tr><td>2510</td><td>SS-31</td><td>$60</td><td>$550</td></tr>
+            <tr><td>2550</td><td>SS-31</td><td>$75</td><td>$700</td></tr>
+            <tr><td>BT10</td><td>TB500</td><td>$45</td><td>$400</td></tr>
+            <tr><td>TA10</td><td>Thymosin-Alpha1</td><td>$40</td><td>$375</td></tr>
+            <tr><td>VIP5</td><td>VIP</td><td>$40</td><td>$375</td></tr>
+            <tr><td>VIP10</td><td>VIP</td><td>$50</td><td>$475</td></tr>
+            <tr><td>KPV10</td><td>KPV</td><td>$45</td><td>$425</td></tr>
+        </tbody>
+    </table>
+
+    <p><strong>To inquire or place an order:</strong> Contact us at <a href="mailto:info@pro-peptides.com">info@pro-peptides.com</a></p>
+    <p>All orders require verification of research intent and institutional affiliation.</p>
+</div>
+
+<footer>
+    <p>&copy; 2025 Pro-Peptides. All rights reserved. | For Research Use Only. Not for Human or Animal Consumption.</p>
+</footer>
+
+<script>
+    function enterSite() {
+        // Optional: Set a session cookie to skip verification on refresh
+        document.cookie = "age_verified=true; path=/";
+        document.getElementById('age-verification').style.display = 'none';
+    }
+
+    function exitSite() {
+        window.location.href = 'https://www.google.com';
+    }
+
+    // Check if already verified
+    window.onload = function() {
+        if (document.cookie.includes('age_verified=true')) {
+            document.getElementById('age-verification').style.display = 'none';
+        }
+    };
+</script>
+
+</body>
+</html>
